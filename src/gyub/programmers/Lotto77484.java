@@ -1,8 +1,5 @@
 package gyub.programmers;
 
-import java.lang.reflect.Array;
-import java.util.Arrays;
-
 /**
  * Description : 로또의 최고 순위와 최저 순위<br>
  * Date : 2021. 8. 30.<br>
@@ -18,7 +15,7 @@ public class Lotto77484 {
 	public static void main(String [] args) {
 		int [] lottos = new int [6];
 		int [] winNumber = new int [6];
-
+		
 		System.out.println(solution(lottos, winNumber));
 	}
 	
