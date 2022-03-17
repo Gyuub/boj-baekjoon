@@ -30,8 +30,8 @@ public class Problem42576 {
      */
     public static void main(String[] args) {
         System.out.println(
-                해쉬를_이용한_방법(new String[]{"a", "b", "c", "d"},
-                        new String[]{"c", "a", "b"})
+                해쉬를_이용한_방법(new String[]{"a", "a", "b", "d"},
+                        new String[]{"a", "b", "d"})
         );
     }
 
@@ -57,16 +57,14 @@ public class Problem42576 {
             answerMap.put(str , i);
         }
         for (String str : completion) {
-            int i = answerMap.getOrDefault(str, 0) - 1;
-            answerMap.put(str , i);
+            int i = answerMap.get(str) - 1;
+            answerMap.put(str, i);
+            if(i == 0) answerMap.remove(str);
         }
+
+
         Iterator<String> iterator = answerMap.keySet().iterator();
-        while(iterator.hasNext()){
-            answer = iterator.next();
-            if(answerMap.get(answer) > 0){
-                break;
-            }
-        }
+        answer = iterator.next();
         return answer;
     }
 
