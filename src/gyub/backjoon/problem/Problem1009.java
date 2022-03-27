@@ -35,8 +35,12 @@ public class Problem1009 {
             int a = Integer.parseInt(st.nextToken());
             String str = st.nextToken();
             int b = Integer.parseInt(str.substring(str.length()-1));
-            int pow = (int)Math.pow(a, b);
-            System.out.println(pow%10 == 0 ? 10 : pow%10 );
+            int sum = 0;
+            for (int j = 0; j < b; j++) {
+                sum = (a*a) % 10;
+             }
+
+            System.out.println(sum == 0 ? 10 : sum );
         }
     }
 
